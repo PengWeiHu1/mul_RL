@@ -121,7 +121,7 @@ def random_smile(file,use_cuda,vocab):
     return inp,target
 
 #%%
-def sampleing(generation,use_cuda,vocab,sample=0.75, prime_str='G', end_token='$', predict_len=100):
+def sampleing(generation,use_cuda,vocab,sample=0.9, prime_str='G', end_token='$', predict_len=100):
     hidden = generation.init_hidden()
     if generation.has_cell:
         cell = generation.init_cell()
